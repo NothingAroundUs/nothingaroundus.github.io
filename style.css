@@ -1,0 +1,149 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  transition: 1s;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  left: 0;
+  right: 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+nav {
+  text-align: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  margin: 0 10px;
+  cursor: pointer;
+  /* Add cursor style to indicate links */
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  margin-top: 110px;
+  /* Add margin to separate content from header */
+  padding: 20px;
+  background-color: #fff;
+}
+
+h2 {
+  color: #333;
+}
+
+.social-icon {
+  margin-right: 5px;
+}
+
+.profile {
+  text-align: center;
+}
+
+.profile img {
+  max-width: 200px;
+  border-radius: 50%;
+}
+
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.portfolio-item {
+  width: calc(33.33% - 10px);
+  margin-bottom: 20px;
+  position: relative;
+  cursor: pointer;
+  max-height: none;
+  transition: height 0.3s ease-in-out;
+  overflow: visible;
+}
+
+.portfolio-description {
+  max-height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease-in-out;
+  background-color: #fff;
+
+}
+
+.portfolio-item.active .portfolio-description {
+  max-height: 200px;
+  /* Adjust the max-height as needed */
+  opacity: 1;
+}
+
+.toggle-description {
+  color: #007bff;
+  transition: color 1s, transform 1s;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  transform: rotate(0deg);
+  /* Initial rotation */
+  transform-origin: center;
+  /* Rotate from the center */
+}
+
+.rotate {
+  transform: rotate(90deg);
+  /* Rotate the arrow 90 degrees */
+}
+
+.push-down {
+  margin-top: 30px;
+  /* Adjust this value according to your layout */
+}
+
+.portfolio-item {
+  overflow: hidden;
+}
+
+.portfolio-description {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.portfolio-description {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
+}
+
+.portfolio-item.active .portfolio-description {
+  opacity: 1;
+  max-height: 500px;
+}
+
+.release{
+  background-color: #e0e0e0;
+  text-align: center;
+  width: 290px;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+#album-cover{
+  border-radius: 5px;
+}
